@@ -21,26 +21,56 @@
     </header>
         <main>
           <h1 class="visually-hidden">Найти гостиницу в Седоне</h1>
-          <section class="catalog-filters">
-            <h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
-          <!-- **Форма**
-            Инфраструктура:
-            Бассейн
-            Парковка
-            Wi-Fi
-            Тип жилья:
-            Гостиница
-            Мотель
-            Апартаменты
-            Стоимость в сутки (Р):
-            от 0 До 3000
-            Показать
-            Найдено: 3
-            Сортировка
-            По цене
-            По типу
-            По рейтингу
-          -->
+            <section class="catalog-search">
+                <h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
+              <!-- **Форма** 
+                <div class="search-filters">
+                    <div class="filters-block">
+                        <p>Инфраструктура:</p>
+                        <label>
+                            <input type="checkbox" value="pool" checked>Бассейн
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" value="parking">Парковка
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" value="wifi">Wi-Fi
+                        </label>
+                    </div>
+                    <div class="filters-block">
+                        <p>Тип жилья:</p>
+                        <label>
+                            <input type="checkbox" value="hotel" checked>Гостиница
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" value="motel" checked>Мотель
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" value="apartments" checked>Апартаменты
+                        </label>
+                    </div>
+                    <div class="price-range">
+                        <label for="price-count">Стоимость в сутки (Р):</label>
+                        <br>
+                        От 0<input id="price-count" type="range" min="0" max="3000" step="100" value="2400">До 3000
+                        <br>
+                        <button class="button button-light">Показать</button>
+                    </div>
+                </div>
+                -->
+                <div class="sort-list">
+                <b>Найдено: 3</b>
+                <h3>Сортировка</h3>
+                <ul class="sort-type">
+                    <li class="sort-type-item">По цене</li>
+                    <li class="sort-type-item">По типу</li>
+                    <li class="sort-type-item">По рейтингу</li>
+                </ul>
+                </div>
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Список гостиниц</h2>
@@ -48,7 +78,7 @@
               <li class="catalog-item">
                 <div class="catalog-item-image">
                   <a href="">
-                    <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+                    <img src="img/amara-resort.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
                   </a>
                   <div class="catalog-item-info">
                     <h3><a href="">Amara Resort & Spa</a></h3>
@@ -64,7 +94,7 @@
               <li class="catalog-item">
                 <div class="catalog-item-image">
                   <a href="">
-                    <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+                    <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
                   </a>
                   <div class="catalog-item-info">
                     <h3><a href="">Desert Quail Inn</a></h3>
@@ -80,7 +110,7 @@
               <li class="catalog-item">
                 <div class="catalog-item-image">
                   <a href="">
-                    <img src="img/hotel-picture-3.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+                    <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
                   </a>
                   <div class="catalog-item-info">
                     <h3><a href="">Villas at Poco Diablo</a></h3>
