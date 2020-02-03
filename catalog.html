@@ -15,58 +15,63 @@
                         <li><a href="">Информация</a></li>
                         <li><a href="">Фото и видео</a></li>
                         <li><a href="">Карта штата</a></li>
-                        <li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
+                        <li class="site-navigation-current"><a>Гостиницы</a></li>
                     </ul>
                 </nav>
             </header>
             <main>
                 <h1 class="visually-hidden">Найти гостиницу в Седоне</h1>
                 <section class="catalog-filter">
-                    <form method="get" action="">
+                    <form  class="catalog-filter-form" method="get" action="https://echo.htmlacademy.ru">
                         <h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
-                        <div class="filters-block">
-                            <h2>Инфраструктура:</h2>
+                        <fieldset class="catalog-filter-group">
+                            <legend class="catalog-filter-title">Инфраструктура:</legend>
                             <ul>
                                 <li>
-                                    <label>
-                                        <input type="checkbox" value="pool" checked>Бассейн
-                                    </label>
+                                    <input id="pool" type="checkbox" value="pool" checked>
+                                    <label for="pool" >Бассейн</label>
                                 </li>
                                 <li>
-                                    <label>
-                                        <input type="checkbox" value="parking">Парковка
-                                    </label>
+                                    <input id="parking" type="checkbox" value="parking">
+                                    <label for="parking" >Парковка</label>
                                 </li>
                                 <li>
-                                    <label>
-                                        <input type="checkbox" value="wifi">Wi-Fi
-                                    </label>
+                                    <input id="wifi" type="checkbox" value="wifi">
+                                    <label for="wifi" >Wi-Fi</label>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="filters-block">
-                            <p>Тип жилья:</p>
+                        </fieldset>
+                        <fieldset class="catalog-filter-group">
+                            <legend class="catalog-filter-title">Тип жилья:</legend>
                             <ul>
                                 <li>
-                                    <label>
-                                        <input type="checkbox" value="hotel" checked>Гостиница
-                                    </label>
+                                    <input id="hotel" type="checkbox" value="hotel" checked>
+                                    <label for="hotel" >Гостиница</label>
                                 </li>
                                 <li>
-                                    <label>
-                                        <input type="checkbox" value="motel" checked>Мотель
-                                    </label>
+                                    <input id="motel" type="checkbox" value="motel" checked>
+                                    <label for="motel" >Мотель</label>
                                 </li>
                                 <li>
-                                    <label>
-                                        <input type="checkbox" value="apartments" checked>Апартаменты
-                                    </label>
+                                    <input id="apartments" type="checkbox" value="apartments" checked>
+                                    <label for="apartments" >Апартаменты</label>
                                 </li>
                             </ul>
-                        </div>
+                        </fieldset>
                         <div class="price-range">
                             <label for="price-count">Стоимость в сутки (Р):</label>
-                            От 0<input id="price-count" type="range" min="0" max="3000" step="100" value="2400">До 3000
+                            <label>От
+                                <input value="0" type="number">
+                            </label>
+                            <label>До
+                                <input value="3000" type="number">
+                            </label>
+                            <div class="catalog-filter-range">
+                                <div class="catalog-filter-bar"></div>
+                                <button class="filter-toggle filter-toggle-min" aria-label="минимальная цена"></button>
+                                <button class="filter-toggle filter-toggle-max" aria-label="максимальная цена"></button>
+                            </div>
+                            <input id="price-count" type="range" min="0" max="3000" step="100" value="2400">
                             <button class="button button-light">Показать</button>
                         </div>
                     </form>
@@ -79,8 +84,8 @@
                             <li class="sort-type-item"><a href="">По рейтингу</a></li>
                         </ul>
                         <div class="arrows">
-                            <a class="arrow arrow-up" href=""></a>
-                            <a class="arrow arrow-down" href=""></a>
+                            <a class="arrow arrow-up" aria-label="по убыванию" href=""></a>
+                            <a class="arrow arrow-down" aria-label="по возрастанию" href=""></a>
                         </div>
                     </div>
                 </section>
