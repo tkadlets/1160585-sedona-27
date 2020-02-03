@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-    	<meta charset="utf-8">
-    	<title>Каталог гостиниц в Седоне</title>
+        <meta charset="utf-8">
+        <title>Каталог гостиниц в Седоне</title>
     </head>
     <body>
         <div class="container">
             <header>
                 <nav>
                     <a href="index.html">
-                    <img src="img/logo-sedona.svg" alt="Логотип Седона" width="140" height="71">
+                        <img src="img/logo-sedona.svg" alt="Логотип Седона" width="140" height="71">
                     </a>
-                  	<ul class="site-navigation">
-                  		<li><a href="">Информация</a></li>
-                  		<li><a href="">Фото и видео</a></li>
-                  		<li><a href="">Карта штата</a></li>
-                  		<li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
-                  	</ul>
+                    <ul class="site-navigation">
+                        <li><a href="">Информация</a></li>
+                        <li><a href="">Фото и видео</a></li>
+                        <li><a href="">Карта штата</a></li>
+                        <li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
+                    </ul>
                 </nav>
             </header>
             <main>
                 <h1 class="visually-hidden">Найти гостиницу в Седоне</h1>
                 <section class="catalog-filter">
-                    <h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
-                    <!-- **Форма** 
-                    <div class="filters-block">
-                        <h2>Инфраструктура:</h2>
-                        <label>
-                            <input type="checkbox" value="pool" checked>Бассейн
-                        </label>
-                        <label>
-                            <input type="checkbox" value="parking">Парковка
-                        </label>
-                        <label>
-                            <input type="checkbox" value="wifi">Wi-Fi
-                        </label>
-                    </div>
-                    <div class="filters-block">
-                        <p>Тип жилья:</p>
-                        <label>
-                            <input type="checkbox" value="hotel" checked>Гостиница
-                        </label>
-                        <label>
-                            <input type="checkbox" value="motel" checked>Мотель
-                        </label>
-                        <label>
-                            <input type="checkbox" value="apartments" checked>Апартаменты
-                        </label>
+                    <form method="get" action="">
+                        <h2 class="visually-hidden">Фильтры для поиска гостиницы</h2>
+                        <div class="filters-block">
+                            <h2>Инфраструктура:</h2>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="pool" checked>Бассейн
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="parking">Парковка
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="wifi">Wi-Fi
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filters-block">
+                            <p>Тип жилья:</p>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="hotel" checked>Гостиница
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="motel" checked>Мотель
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" value="apartments" checked>Апартаменты
+                                    </label>
+                                </li>
+                            </ul>
                         </div>
                         <div class="price-range">
                             <label for="price-count">Стоимость в сутки (Р):</label>
                             От 0<input id="price-count" type="range" min="0" max="3000" step="100" value="2400">До 3000
                             <button class="button button-light">Показать</button>
                         </div>
-                        -->
-                        <div class="sort">
-                            <b>Найдено: 3</b>
-                            <span>Сортировка</span>
-                            <ul class="sort-type">
-                                <li class="sort-type-item"><a href="">По цене</a></li>
-                                <li class="sort-type-item"><a href="">По типу</a></li>
-                                <li class="sort-type-item"><a href="">По рейтингу</a></li>
-                            </ul>
-                            <div class="arrows">
-                                <a class="arrow arrow-up" href=""></a>
-                                <a class="arrow arrow-down" href=""></a>  
-                            </div>
+                    </form>
+                    <div class="sort">
+                        <b>Найдено: 3</b>
+                        <span>Сортировка</span>
+                        <ul class="sort-type">
+                            <li class="sort-type-item"><a href="">По цене</a></li>
+                            <li class="sort-type-item"><a href="">По типу</a></li>
+                            <li class="sort-type-item"><a href="">По рейтингу</a></li>
+                        </ul>
+                        <div class="arrows">
+                            <a class="arrow arrow-up" href=""></a>
+                            <a class="arrow arrow-down" href=""></a>
                         </div>
+                    </div>
                 </section>
                 <section class="catalog">
                     <h2 class="visually-hidden">Список гостиниц</h2>
@@ -75,7 +91,7 @@
                             <div class="catalog-item-main">
                                 <a class="catalog-item-image" href="">
                                     <img src="img/amara-resort.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-                                 </a>
+                                </a>
                                 <div class="catalog-item-info">
                                     <h3 class="catalog-item-title"><a href="">Amara Resort & Spa</a></h3>
                                     <span>Гостиница</span>
@@ -125,8 +141,8 @@
             <footer class="page-footer">
                 <div class="contacts-info">
                     <p>
-                    #visitsedona<br>
-                    Тел: +7(495) 666-02-66
+                        #visitsedona<br>
+                        Тел: +7(495) 666-02-66
                     </p>
                 </div>
                 <ul class="social">
