@@ -562,7 +562,6 @@ img { max-width: 100% }
 }
 
 .catalog-item-stars {
-	text-align: right;
 	background-image: url('../img/star.svg');
 	background-repeat: space;
 	height: 17px;
