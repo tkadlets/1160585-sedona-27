@@ -155,6 +155,7 @@ img { max-width: 100% }
 
 .advantages {
 	padding-top: 60px;
+	counter-reset: advantages-order;
 }
 
 .page-title {
@@ -190,45 +191,64 @@ img { max-width: 100% }
 	display: block;
 }
 
-.advantages-item:first-of-type,
-.advantages-item:nth-of-type(2) {
+.advantages-item-town,
+.advantages-item-bridge {
 	background-color: #81b3d2;
 	width: 100%;
 }
 
-.advantages-item:first-of-type {
+.advantages-item-town {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .advantages-info {
 	margin: 0 auto;
 }
 
-.advantages-item p {
-	margin-top: 65px;
+.advantage-title {
+	position: relative;
 }
 
+.advantage-title::after {
+	content: '— №' counter(advantages-order) ' —';
+	width: 100%;
+	counter-increment: advantages-order;
+	position: absolute;
+	transform: translateX(-50%);
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	left: 50%;
+	top: 150%;
+	color: #333333;
+}
 
-.advantages-item:first-of-type .advantage-title {
+.advantages-item-town .advantage-title::after,
+.advantages-item-bridge .advantage-title::after {
+	color: #fff;
+}
+
+.advantages-item p {
+	padding-top: 65px;
+	margin: 0;
+}
+
+.advantages-item-town .advantage-title {
 	width: 130px;
 	color: #ffffff;
+}
+
+.advantages-item-town .advantages-info,
+.advantages-item-bridge .advantages-info {
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .advantage-text {
 	width: 285px;
 	color: #ffffff;
-	position: relative;
-}
-
-.advantage-text::before {
-	content: '– №1 –';
-	position: absolute;
-	left: 50%;
-	bottom: 65px;
-	transform: translateX(-50%);
 }
 
 .advantages-sublist {
@@ -243,7 +263,7 @@ img { max-width: 100% }
 	position: relative;
 }
 
-.advantages-sublist-item:first-of-type::before {
+.advantages-sublist-item-accommodation::before {
 	position: absolute;
 	content: '';
 	background: url('../img/housing-icon.svg') no-repeat;
@@ -253,7 +273,7 @@ img { max-width: 100% }
 	top: 60px;
 }
 
-.advantages-sublist-item:nth-of-type(2)::before {
+.advantages-sublist-item-food::before {
 	position: absolute;
 	content: '';
 	background: url('../img/burger-icon.svg') no-repeat;
@@ -263,7 +283,7 @@ img { max-width: 100% }
 	top: 60px;
 }
 
-.advantages-sublist-item:last-of-type::before {
+.advantages-sublist-item-gifts::before {
 	position: absolute;
 	content: '';
 	background: url('../img/gift-icon.svg') no-repeat;
@@ -273,19 +293,22 @@ img { max-width: 100% }
 	top: 60px;
 }
 
-.advantages-sublist-item:first-of-type  p {
+.advantages-sublist-item-accommodation  p {
 	width: 255px;
-	margin: 28px auto 0;
+	margin: 0 auto;
+	padding-top: 28px;
 }
 
-.advantages-sublist-item:nth-of-type(2) p {
+.advantages-sublist-item-food p {
 	width: 284px;
-	margin: 28px auto 0;
+	margin: 0 auto;
+	padding-top: 28px;
 }
 
-.advantages-sublist-item:last-of-type p {
+.advantages-sublist-item-gifts p {
 	width: 273px;
-	margin: 28px auto 0;
+	margin: 0 auto;
+	padding-top: 28px;
 }
 
 .advantage-title,
@@ -297,113 +320,81 @@ img { max-width: 100% }
 	font-weight: 700;
 }
 
-.advantages-item:nth-of-type(2) {
+.advantages-item-bridge {
 	display: flex;
 	flex-direction: row-reverse;
-	align-items: center;
 	justify-content: space-between;
 	min-height: 256px
 }
 
-.advantages-item:nth-of-type(2) .advantage-title {
+.advantages-item-bridge .advantage-title {
 	width: 155px;
 	color: #ffffff;
 }
 
-.advantages-item:nth-of-type(2) p {
+.advantages-item-bridge p {
 	width: 305px;
 	color: #ffffff;
-	position: relative;
 }
 
-.advantages-item:nth-of-type(2) p::before {
-	content: '– №2 –';
-	position: absolute;
-	left: 50%;
-	bottom: 65px;
-	transform: translateX(-50%);
-}
-
-
-.advantages-item:nth-of-type(3),
-.advantages-item:nth-of-type(4),
-.advantages-item:last-of-type {
+.advantages-item-small,
+.advantages-item-route,
+.advantages-item-uncrowded {
 	padding-top: 50px;
 	width: 33.3334%;
 	background-color: #eeeeee;
 	min-height: 256px;
 }
 
-.advantages-item:nth-of-type(3) .advantage-title {
+.advantages-item-small .advantage-title {
 	width: 130px;
 	margin: 0 auto;
 }
 
-.advantages-item:nth-of-type(4) .advantage-title {
+.advantages-item-route .advantage-title {
 	width: 110px;
 	margin: 0 auto;
 }
 
-.advantages-item:last-of-type .advantage-title {
+.advantages-item-uncrowded .advantage-title {
 	width: 105px;
 	margin: 0 auto;
 }
 
-.advantages-item:nth-of-type(3) p {
+.advantages-item-small p {
 	width: 210px;
-	margin: 65px auto 0;
-	position: relative;
+	margin: 0 auto;
+	padding-top: 65px;
 }
 
-.advantages-item:nth-of-type(3) p::before {
-	content: '– №3 –';
-	position: absolute;
-	left: 50%;
-	bottom: 65px;
-	transform: translateX(-50%);
-}
-
-.advantages-item:nth-of-type(4) p {
+.advantages-item-route p {
 	width: 265px;
-	margin: 65px auto 0;
-	position: relative;
+	margin: 0 auto;
+	padding-top: 65px;
 }
 
-.advantages-item:nth-of-type(4) p::before {
-	content: '– №4 –';
-	position: absolute;
-	left: 50%;
-	bottom: 65px;
-	transform: translateX(-50%);
-}
-
-.advantages-item:last-of-type p {
+.advantages-item-uncrowded p {
 	width: 250px;
-	margin: 65px auto 0;
-	position: relative;
-}
-
-.advantages-item:last-of-type p::before {
-	content: '– №5 –';
-	position: absolute;
-	left: 50%;
-	bottom: 65px;
-	transform: translateX(-50%);
+	margin: 0 auto;
+	padding-top: 65px;
 }
 
 .hotel-search {
 	padding-top: 50px;
 }
 
-.hotel-search b {
+.hotel-search-title {
 	width: 96px;
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
 	text-align: center;
+	margin-bottom: 25px;
 }
 
 .hotel-search p {
+	margin-top: 25px;
+	margin-bottom: 48px;	
 	font-size: 14px;
 	line-height: 24px;
 	color: #333333;
@@ -572,22 +563,23 @@ img { max-width: 100% }
 
 .catalog-item-stars {
 	text-align: right;
-}
-
-.catalog-item-star {
-	position: relative;
-	display: inline-block;
-	margin: 7px;
-	color: transparent;
-}
-
-.catalog-item-star::after {
-	background: url('../img/star.svg') no-repeat;
+	background-image: url('../img/star.svg');
+	background-repeat: space;
 	height: 17px;
-	width: 18px;
-	position: absolute;
-	content: '';
-	transform: translateX(-58%);
+	width: 107px;
+	margin-left: auto;
+}
+
+.catalog-item-stars-amara-resort {
+	width: 87px;
+}
+
+.catalog-item-stars-quail-inn {
+	width: 65px;
+}
+
+.catalog-item-stars-poco-diablo {
+	width: 40px;
 }
 
 .catalog-item-rating {
