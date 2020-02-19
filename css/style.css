@@ -191,8 +191,7 @@ img { max-width: 100% }
 	display: block;
 }
 
-.advantages-item-town,
-.advantages-item-bridge {
+.advantages-item-blue {
 	background-color: #81b3d2;
 	width: 100%;
 }
@@ -225,8 +224,7 @@ img { max-width: 100% }
 	color: #333333;
 }
 
-.advantages-item-town .advantage-title::after,
-.advantages-item-bridge .advantage-title::after {
+.advantages-item-blue .advantage-title::after {
 	color: #fff;
 }
 
@@ -240,8 +238,7 @@ img { max-width: 100% }
 	color: #ffffff;
 }
 
-.advantages-item-town .advantages-info,
-.advantages-item-bridge .advantages-info {
+.advantages-item-blue .advantages-info {
 	margin-top: auto;
 	margin-bottom: auto;
 }
