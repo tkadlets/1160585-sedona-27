@@ -20,7 +20,6 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
   	padding: 0;
-
 	font-family: 'PT sans', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
@@ -146,7 +145,7 @@ textarea {resize:horizontal;}
 
 .intro {
 	position: relative;
-	height: 510px;
+	height: 507px;
 	padding-top: 77px;
 	text-align: center;
 
@@ -184,7 +183,7 @@ textarea {resize:horizontal;}
 
 .advantages-intro {
 	margin: 0 auto;
-	padding-top: 35px;
+	padding-top: 27px;
 	padding-bottom: 53px;
 	font-size: 14px;
 	line-height: 26px;
@@ -254,8 +253,7 @@ textarea {resize:horizontal;}
 }
 
 .advantages-item-blue .advantages-info {
-	margin-top: auto;
-	margin-bottom: auto;
+	margin-top: 46px;
 }
 
 .advantage-text {
@@ -270,8 +268,8 @@ textarea {resize:horizontal;}
 
 .advantages-sublist-item {
 	width: 33.3334%;
-	padding-top: 160px;
-	padding-bottom: 85px;
+	padding-top: 156px;
+	padding-bottom: 82px;
 	position: relative;
 }
 
@@ -302,25 +300,25 @@ textarea {resize:horizontal;}
 	width: 64px;
 	height: 76px;
 	right: 168px;
-	top: 60px;
+	top: 54px;
 }
 
 .advantages-sublist-item-accommodation  p {
 	width: 255px;
 	margin: 0 auto;
-	padding-top: 28px;
+	padding-top: 24px;
 }
 
 .advantages-sublist-item-food p {
 	width: 284px;
 	margin: 0 auto;
-	padding-top: 28px;
+	padding-top: 24px;
 }
 
 .advantages-sublist-item-gifts p {
 	width: 273px;
 	margin: 0 auto;
-	padding-top: 28px;
+	padding-top: 24px;
 }
 
 .advantage-title,
@@ -330,6 +328,10 @@ textarea {resize:horizontal;}
 	line-height: 21px;
 	text-align: center;
 	font-weight: 700;
+}
+
+.sub-advantage-title {
+    padding-top: 3px
 }
 
 .advantages-item-bridge {
@@ -352,7 +354,7 @@ textarea {resize:horizontal;}
 .advantages-item-small,
 .advantages-item-route,
 .advantages-item-uncrowded {
-	padding-top: 50px;
+	padding-top: 47px;
 	width: 33.3334%;
 	background-color: #eeeeee;
 	min-height: 256px;
@@ -430,7 +432,7 @@ textarea {resize:horizontal;}
 
 .hotel-search p {
 	margin-top: 25px;
-	margin-bottom: 48px;	
+	margin-bottom: 46px;	
 	font-size: 14px;
 	line-height: 24px;
 	color: #333333;
@@ -477,12 +479,11 @@ textarea {resize:horizontal;}
 
 .search-form-group label[for="kids-number"] {
 	width: auto;
-	padding-right: 27px;
+	padding-right: 23px;
 }
 
 .search-form-group .field {
 	width: 346px;
-	height: 38px;
 	font-size: 14px;
 	line-height: 26px;
 	text-transform: inherit;
@@ -490,9 +491,9 @@ textarea {resize:horizontal;}
 	background-color: #f2f2f2;
 	border: 2px solid transparent;
 	box-sizing: border-box;
-	padding-top: 14px;
-	padding-bottom: 13px;	
-	padding-left: 13px;
+	padding-top: 3px;
+	padding-bottom: 4px;	
+	padding-left: 12px;
 }
 
 .search-form-group .field:hover {
@@ -512,8 +513,7 @@ textarea {resize:horizontal;}
 .search-form-group .number-field {
 	text-align: center;
 	width: 38px;
-	height: 38px;
-	padding: 0 38px;
+	padding: 4px 36px;
 	box-sizing: content-box;
 }
 
@@ -531,7 +531,7 @@ textarea {resize:horizontal;}
 }
 
 .search-form .date-select svg {
-	fill: #cacaca; 
+	fill: #a9a9a9; 
 }
 
 .search-form .date-select:hover svg,
@@ -545,9 +545,8 @@ textarea {resize:horizontal;}
 
 
 .search-form-group-button  {
-	position: relative;
-	width: 40px;
-	height: 42px;
+	width: 38px;
+	height: 40px;
 	border: none;
 	background-color: transparent;
 	position: absolute;
@@ -587,9 +586,9 @@ textarea {resize:horizontal;}
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 12px;
+	width: 11px;
 	height: 3px;
-	background-color: #cacaca;
+	background-color: #a9a9a9;
 }
 
 .search-form-group-button-increase::after {
@@ -597,13 +596,15 @@ textarea {resize:horizontal;}
 	content: '';
 	left: 50%;
 	top: 50%;
-	width: 12px;
+	width: 11px;
 	height: 3px;
 	transform: translate(-50%, -50%) rotate(90deg);
-	background-color: #cacaca;
+	background-color: #a9a9a9;
 }
 
 .hotel-search-submit {
+	font-size: 21px;
+	line-height: 26px;
     width: 458px;
     height: 58px;
     margin-top: 54px;
@@ -997,8 +998,9 @@ textarea {resize:horizontal;}
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
-	padding-top: 30px;
-	padding-bottom: 28px;
+	padding-top: 28px;
+	padding-bottom: 31px;
+	padding-left: 26px;
 }
 
 .page-footer-index {
@@ -1019,7 +1021,7 @@ textarea {resize:horizontal;}
 
 .hashtag {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 
 .contacts-info a {
@@ -1031,6 +1033,7 @@ textarea {resize:horizontal;}
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
+	margin-left: -38px;
 	padding: 0;
 	width: 160px;
 }
