@@ -87,8 +87,22 @@ textarea {resize:horizontal;}
 	position: relative;
 }
 
-.visually-hidden {
-	display: none;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-navigation {
@@ -404,6 +418,7 @@ textarea {resize:horizontal;}
 	padding-top: 50px;
 	padding-bottom: 0;
 	position: relative;
+	z-index: 2;
 }
 
 .search-form {
@@ -497,6 +512,7 @@ textarea {resize:horizontal;}
 
 .search-form-group .field {
 	width: 346px;
+	height: 37px;
 	font-size: 14px;
 	line-height: 26px;
 	text-transform: inherit;
@@ -526,7 +542,8 @@ textarea {resize:horizontal;}
 .search-form-group .number-field {
 	text-align: center;
 	width: 38px;
-	padding: 4px 36px;
+	height: 33px;
+	padding: 0 36px;
 	box-sizing: content-box;
 }
 
@@ -559,7 +576,9 @@ textarea {resize:horizontal;}
 
 .search-form-group-button  {
 	width: 38px;
-	height: 40px;
+	height: 37px;
+	padding-top: 0;
+	padding-bottom: 0;
 	border: none;
 	background-color: transparent;
 	position: absolute;
@@ -626,6 +645,21 @@ textarea {resize:horizontal;}
 .map {
 	height: 593px;
 	width: 100%;
+	position: relative;
+}
+
+.map iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.map img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
 }
 
 /*Страница каталога*/
@@ -706,6 +740,10 @@ textarea {resize:horizontal;}
 
 .filter-checkbox:disabled + label {
 	opacity: 0.5;
+}
+
+.filter-checkbox:focus + label {
+	outline: auto
 }
 
 .catalog-filter-group-range {
@@ -1030,6 +1068,7 @@ textarea {resize:horizontal;}
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 100%;
 	bottom: 0;
+	z-index: 3;
 }
 
 .page-footer-catalog .contacts-info {
