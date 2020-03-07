@@ -644,13 +644,6 @@ input[type="radio"].visually-hidden {
 	position: relative;
 }
 
-.map iframe {
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 1;
-}
-
 .map img {
 	position: absolute;
 	left: 0;
