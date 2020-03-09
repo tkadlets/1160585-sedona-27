@@ -61,20 +61,21 @@ searchForm.addEventListener("submit", function (evt) {
 });
 
 searchForm.addEventListener("submit", function (evt) {
- if (adultsNumber.value == 0 && kidsNumber.value == 0) {
+ if (adultsNumber.value == 0) {
 	evt.preventDefault();
  	console.log("Неверное(-ые) значение(-я)");
- 	searchForm.classList.add("search-form-incorrect");
-	} else {
+ 	adultsNumber.style.border = "2px solid #d44848";
+ } else {
 		localStorage.setItem("adultsStorage", adultsNumber.value);
 		localStorage.setItem("kidsStorage", kidsNumber.value);
+		adultsNumber.style.border = "";
 	}
 });
 
 function initMap() {
     var sedona = {lat: 34.869, lng: -111.761};
     var map = new google.maps.Map(
-    document.getElementById('map'), {
+    document.getElementById("map"), {
     	zoom: 9,
     	center: sedona,
     	zoomControl: false,

@@ -1,15 +1,15 @@
 @font-face {
-  	font-family: 'PT sans';
-	src: url('../fonts/ptsans.woff2'),
-	     url('../fonts/ptsans.woff');
+  	font-family: "PT sans";
+	src: url("../fonts/ptsans.woff2"),
+	     url("../fonts/ptsans.woff");
 	font-style: normal;
 	font-weight: 400;
 }
 
 @font-face {
-	font-family: 'PT sans';
-	src: url('../fonts/ptsansbold.woff2'),
-	     url('../fonts/ptsansbold.woff');
+	font-family: "PT sans";
+	src: url("../fonts/ptsansbold.woff2"),
+	     url("../fonts/ptsansbold.woff");
 	font-style: normal;
 	font-weight: 700;
 }
@@ -26,7 +26,7 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
   	padding: 0;
-	font-family: 'PT sans', Arial, sans-serif;
+	font-family: "PT sans", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	text-transform: uppercase;
@@ -42,8 +42,10 @@ a {
 img { max-width: 100% }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,
+input[type=number] {
     -webkit-appearance: none;
+    -moz-appearance: textfield;
     margin: 0;
 }
 
@@ -170,7 +172,7 @@ input[type="radio"].visually-hidden {
 	text-align: center;
 
 	background-color: #4c7e9d;
-	background-image: url('../img/scenery.jpg');
+	background-image: url("../img/scenery.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top -56px left 0;
@@ -182,8 +184,8 @@ input[type="radio"].visually-hidden {
 	bottom: 0;
 	width: 100%;
 	height: 57px;
-	content: '';
-	background: url('../img/intro-mask.svg') no-repeat;
+	content: "";
+	background: url("../img/intro-mask.svg") no-repeat;
 	background-size: cover;
 }
 
@@ -245,7 +247,7 @@ input[type="radio"].visually-hidden {
 }
 
 .advantage-title::after {
-	content: '— №' counter(advantages-order) ' —';
+	content: "— №" counter(advantages-order) " —";
 	width: 100%;
 	counter-increment: advantages-order;
 	position: absolute;
@@ -295,8 +297,8 @@ input[type="radio"].visually-hidden {
 
 .advantages-sublist-item-accommodation::before {
 	position: absolute;
-	content: '';
-	background: url('../img/housing-icon.svg') no-repeat;
+	content: "";
+	background: url("../img/housing-icon.svg") no-repeat;
 	width: 75px;
 	height: 72px;
 	left: 162px;
@@ -305,8 +307,8 @@ input[type="radio"].visually-hidden {
 
 .advantages-sublist-item-food::before {
 	position: absolute;
-	content: '';
-	background: url('../img/burger-icon.svg') no-repeat;
+	content: "";
+	background: url("../img/burger-icon.svg") no-repeat;
 	width: 74px;
 	height: 70px;
 	left: 162px;
@@ -315,8 +317,8 @@ input[type="radio"].visually-hidden {
 
 .advantages-sublist-item-gifts::before {
 	position: absolute;
-	content: '';
-	background: url('../img/gift-icon.svg') no-repeat;
+	content: "";
+	background: url("../img/gift-icon.svg") no-repeat;
 	width: 64px;
 	height: 76px;
 	right: 168px;
@@ -610,7 +612,7 @@ input[type="radio"].visually-hidden {
 
 .search-form-group-button::before {
 	position: absolute;
-	content: '';
+	content: "";
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -621,7 +623,7 @@ input[type="radio"].visually-hidden {
 
 .search-form-group-button-increase::after {
 	position: absolute;
-	content: '';
+	content: "";
 	left: 50%;
 	top: 50%;
 	width: 11px;
@@ -703,7 +705,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-filter-item::before {
 	position: absolute;
-	content: '';
+	content: "";
 	border: 2px solid #ffffff;
 	border-radius: 3px;
 	width: 23px;
@@ -714,8 +716,8 @@ input[type="radio"].visually-hidden {
 
  .filter-checkbox:checked + .catalog-filter-item::after {
 	position: absolute;
-	content: '';
-	background: url('../img/checkbox-on.svg') no-repeat;
+	content: "";
+	background: url("../img/checkbox-on.svg") no-repeat;
 	width: 27px;
 	height: 27px;
 	top: 0;
@@ -1015,7 +1017,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-stars {
-	background-image: url('../img/star.svg');
+	background-image: url("../img/star.svg");
 	background-repeat: space;
 	height: 17px;
 	width: 107px;
