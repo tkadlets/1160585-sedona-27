@@ -11,14 +11,32 @@
  var checkInStorage = localStorage.getItem("checkInStorage");
  var checkOutStorage = localStorage.getItem("checkOutStorage");
 
- searchForm.classList.remove("search-form-shown");
+searchForm.classList.remove("search-form-shown");
+searchForm.classList.add("search-form-hidden");
 
  hotelSearchButton.addEventListener("click", function (evt) {
  	evt.preventDefault();
- 	searchForm.classList.toggle("search-form-shown");
+
+ 	if (searchForm.classList.contains("search-form-shown")) {
+ 		searchForm.classList.remove("search-form-shown");
+ 		setTimeout(function(){ 
+ 		searchForm.classList.add("search-form-hidden");
+ 		}, 10);
+ 		searchForm.classList.remove("search-form-error");
+ 		checkIn.style.border = "";
+ 		checkOut.style.border = "";
+ 		adultsNumber.style.border = "";
+ 		kidsNumber.style.border = "";
+ 	} else {
+ 		searchForm.classList.remove("search-form-hidden");
+ 		setTimeout(function(){ 
+ 		searchForm.classList.add("search-form-shown");
+ 		}, 10);
+ 	}
+
  	if (adultsStorage) {
  		adultsNumber.value = adultsStorage;
- 	}
+}
  	if (kidsStorage) {
 		kidsNumber.value = kidsStorage;
 }
@@ -30,10 +48,15 @@
 }
  });
 
+
 searchForm.addEventListener("submit", function (evt) {
  if (!checkIn.value || !checkOut.value || !adultsNumber.value || !kidsNumber.value) {
  	evt.preventDefault();
  	console.log("Отсутствующее(-ие) значение(-я)");
+ 	searchForm.classList.remove("search-form-error");
+ 	setTimeout(function(){ 
+ 	searchForm.classList.add("search-form-error");
+	 }, 1);
  } else {
  		localStorage.setItem("checkInStorage", checkIn.value);
 		localStorage.setItem("checkOutStorage", checkOut.value);
@@ -64,6 +87,10 @@ searchForm.addEventListener("submit", function (evt) {
  if (adultsNumber.value == 0) {
 	evt.preventDefault();
  	console.log("Неверное(-ые) значение(-я)");
+ 	searchForm.classList.remove("search-form-error");
+ 	setTimeout(function(){ 
+ 	searchForm.classList.add("search-form-error");
+ }, 1);
  	adultsNumber.style.border = "2px solid #d44848";
  } else {
 		localStorage.setItem("adultsStorage", adultsNumber.value);
